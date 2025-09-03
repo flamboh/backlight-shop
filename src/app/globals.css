@@ -3,6 +3,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme backlight {
+  --color-pfp-left: oklch(0.4982 0.093 16.44);
+  --color-pfp-middle: oklch(0.4643 0.0815 328.45);
+  --color-pfp-right: oklch(0.4474 0.1549 358.08);
+  --color-header: oklch(0.548 0.1123 306.74);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
