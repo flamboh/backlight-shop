@@ -1,7 +1,15 @@
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import Navbar from "@/components/comp-587";
+
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 gradient-background">
-      <h1 className="text-4xl font-bold ">{"What's up?"}</h1>
+    <div className="font-sans flex flex-col items-center justify-items-center min-h-[200vh] animated-gradient">
+      <Navbar />
+      <h1 className="text-4xl font-bold ">{"Hello?"}</h1>
+      <Card>
+        <Button>Click me</Button>
+      </Card>
     </div>
   );
 }
