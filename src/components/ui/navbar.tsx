@@ -1,14 +1,8 @@
 import { useId } from "react";
-import {
-  HouseIcon,
-  SearchIcon,
-  ShoppingCartIcon,
-  UserIcon,
-} from "lucide-react";
+import { HouseIcon, ShoppingCartIcon, UserIcon } from "lucide-react";
 
 import Logo from "@/components/navbar-components/logo";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -34,17 +28,12 @@ export default function Navbar() {
 
   return (
     <header className="border px-4 md:px-6 bg-accent rounded-lg w-[70%] my-4 py-2">
-      <div className="flex h-16 items-center justify-between gap-4">
-        {/* Left side */}
-        <div className="flex flex-1 items-center gap-2">
-          {/* Mobile menu trigger */}
+      <div className="flex h-16 items-center justify-between gap-4 md:justify-between">
+        {/* Mobile: Menu button and Logo centered */}
+        <div className="flex w-full items-center justify-between md:hidden">
           <Popover>
             <PopoverTrigger asChild>
-              <Button
-                className="group size-8 md:hidden"
-                variant="ghost"
-                size="icon"
-              >
+              <Button className="group size-8" variant="ghost" size="icon">
                 <svg
                   className="pointer-events-none"
                   width={16}
@@ -72,7 +61,7 @@ export default function Navbar() {
                 </svg>
               </Button>
             </PopoverTrigger>
-            <PopoverContent align="start" className="w-36 p-1 md:hidden">
+            <PopoverContent align="start" className="w-36 p-1">
               <NavigationMenu className="max-w-none *:w-full">
                 <NavigationMenuList className="flex-col items-start gap-0 md:gap-2">
                   {navigationLinks.map((link, index) => {
@@ -98,7 +87,19 @@ export default function Navbar() {
               </NavigationMenu>
             </PopoverContent>
           </Popover>
-          {/* Logo */}
+
+          {/* Logo centered on mobile */}
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <a href="#" className="text-primary hover:text-primary/90">
+              <Logo />
+            </a>
+          </div>
+
+          <ModeToggle />
+        </div>
+
+        {/* Desktop: Left side with logo */}
+        <div className="hidden md:flex flex-1 items-center gap-2">
           <div className="flex items-center">
             <a href="#" className="text-primary hover:text-primary/90">
               <Logo />
@@ -129,8 +130,8 @@ export default function Navbar() {
             })}
           </NavigationMenuList>
         </NavigationMenu>
-        {/* Right side */}
-        <div className="flex flex-1 items-center justify-end gap-2">
+        {/* Desktop: Right side */}
+        <div className="hidden md:flex flex-1 items-center justify-end gap-2">
           {/* <div className="relative">
             <Input
               id={id}
