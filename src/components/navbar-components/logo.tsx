@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 export default function Logo() {
   // Assumes you have a logo.jpg in your public/ directory
   // You can adjust width/height/alt as needed
   return (
-    <img
+    <Image
       src="/backlight.png"
       alt="Logo"
       width={64}

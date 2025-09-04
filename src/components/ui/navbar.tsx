@@ -1,11 +1,9 @@
 import { useId } from "react";
 import {
   HouseIcon,
-  InboxIcon,
   SearchIcon,
   ShoppingCartIcon,
   UserIcon,
-  ZapIcon,
 } from "lucide-react";
 
 import Logo from "@/components/navbar-components/logo";
@@ -26,16 +24,16 @@ import { ModeToggle } from "./theme-toggle";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
-  { href: "#", label: "Home", icon: HouseIcon, active: true },
-  { href: "#", label: "Shop", icon: ShoppingCartIcon },
-  { href: "#", label: "About", icon: UserIcon },
+  { href: "/", label: "Home", icon: HouseIcon, active: true },
+  { href: "/shop", label: "Shop", icon: ShoppingCartIcon },
+  { href: "/about", label: "About", icon: UserIcon },
 ];
 
 export default function Navbar() {
   const id = useId();
 
   return (
-    <header className="border px-4 md:px-6 bg-background rounded-lg w-[70%] my-4 py-2">
+    <header className="border px-4 md:px-6 bg-accent rounded-lg w-[70%] my-4 py-2">
       <div className="flex h-16 items-center justify-between gap-4">
         {/* Left side */}
         <div className="flex flex-1 items-center gap-2">
@@ -133,7 +131,7 @@ export default function Navbar() {
         </NavigationMenu>
         {/* Right side */}
         <div className="flex flex-1 items-center justify-end gap-2">
-          <div className="relative">
+          {/* <div className="relative">
             <Input
               id={id}
               className="peer h-8 ps-8 pe-2"
@@ -143,7 +141,7 @@ export default function Navbar() {
             <div className="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-2 peer-disabled:opacity-50">
               <SearchIcon size={16} />
             </div>
-          </div>
+          </div> */}
           <ModeToggle />
         </div>
       </div>
