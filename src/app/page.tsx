@@ -14,7 +14,7 @@ export default function Home() {
           <Image
             src="/favicon.ico"
             alt="Backlight"
-            className="w-[clamp(6rem,10vw,16rem)] h-[clamp(6rem,10vw,16rem)]"
+            className="w-[clamp(6rem,10vw,16rem)] h-[clamp(6rem,10vw,16rem)] blur-in-10 animate-in ease-in duration-2000"
             width={96}
             height={96}
           />

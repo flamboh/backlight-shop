@@ -27,7 +27,7 @@ export default function Navbar() {
   const id = useId();
 
   return (
-    <header className="border px-4 md:px-6 bg-accent rounded-lg w-[70%] my-4 py-2 animate-in slide-in-from-bottom-12 duration-300 ease-out blur-in-50">
+    <header className="border px-4 md:px-6 bg-accent rounded-lg w-[70%] my-4 py-2 animate-in slide-in-from-bottom-12 duration-300 ease-in fade-in">
       <div className="flex h-16 items-center justify-between gap-4 md:justify-between">
         {/* Mobile: Menu button and Logo centered */}
         <div className="flex w-full items-center justify-between md:hidden">
