@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Permanent+Marker&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -178,6 +179,9 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+
+  --font-caveat: "Caveat Brush", cursive;
+  --font-permanent-marker: "Permanent Marker", cursive;
 }
 
 @layer base {
